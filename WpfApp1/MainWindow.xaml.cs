@@ -26,9 +26,9 @@ namespace WpfApp1
             InitializeComponent();
             
             List<Data> list = new List<Data>();
-            list.Add(new Data {name = "office1", xx=100, yy=100, area = 10000, tile=10 });
-            list.Add(new Data { name = "office2", xx = 200, yy = 200, area = 40000, tile = 40 });
-            list.Add(new Data { name = "office3", xx = 300, yy = 300, area = 90000, tile = 90 });
+            list.Add(new Data {name = "office1", height=100, width=100, area = 10000, tile=10 });
+            list.Add(new Data { name = "office2", height = 200, width = 200, area = 40000, tile = 40 });
+            list.Add(new Data { name = "office3", height = 300, width = 300, area = 90000, tile = 90 });
 
         }
 
@@ -36,8 +36,8 @@ namespace WpfApp1
     public class Data 
     {
         public string name { get; set; }
-        public double xx { get; set; }
-        public double yy { get; set; }  
+        public double height { get; set; }
+        public double width { get; set; }  
         public double area { get; set; }    
         public int tile { get; set; }
     }

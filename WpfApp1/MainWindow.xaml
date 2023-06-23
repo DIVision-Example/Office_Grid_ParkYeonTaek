@@ -33,8 +33,8 @@
             <DataGrid x:Name="OfficeList">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="이름" Binding="{Binding Path=name}" Width="130"/>
-                    <DataGridTextColumn Header="이름" Binding="{Binding Path=xx}" Width="130"/>
-                    <DataGridTextColumn Header="이름" Binding="{Binding Path=yy}" Width="130"/>
+                    <DataGridTextColumn Header="이름" Binding="{Binding Path=height}" Width="130"/>
+                    <DataGridTextColumn Header="이름" Binding="{Binding Path=width}" Width="130"/>
                     <DataGridTextColumn Header="이름" Binding="{Binding Path=area}" Width="130"/>
                     <DataGridTextColumn Header="이름" Binding="{Binding Path=tile}" Width="130"/>
                 </DataGrid.Columns>
