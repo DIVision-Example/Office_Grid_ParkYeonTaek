@@ -25,15 +25,16 @@ namespace WpfApp1
         {
             InitializeComponent();
             
-            List<Data> list = new List<Data>();
-            list.Add(new Data {name = "office1", height=100, width=100, area = 10000, tile=10 });
-            list.Add(new Data { name = "office2", height = 200, width = 200, area = 40000, tile = 40 });
-            list.Add(new Data { name = "office3", height = 300, width = 300, area = 90000, tile = 90 });
+            List<Office> list = new List<Office>();
+            list.Add(new Office {name = "office1", height=100, width=100, area = 10000, tile=10 });
+            list.Add(new Office { name = "office2", height = 200, width = 200, area = 40000, tile = 40 });
+            list.Add(new Office { name = "office3", height = 300, width = 300, area = 90000, tile = 90 });
 
+            OfficeList.ItemsSource = list;
         }
 
     }
-    public class Data 
+    public class Office 
     {
         public string name { get; set; }
         public double height { get; set; }
