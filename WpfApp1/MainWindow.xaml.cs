@@ -21,40 +21,24 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        public ObservableCollection<Office> officeList = new ObservableCollection<Office>();
         public MainWindow()
         {
             InitializeComponent();
-            /*
-            OfficeList.Add(new Office("Office1", Office1.ActualHeight, Office1.ActualWidth));
-            OfficeList.Add(new Office("Office2", Office2.ActualHeight, Office2.ActualWidth));
-            OfficeList.Add(new Office("Office3", Office3.ActualHeight, Office3.ActualWidth));
-            */
-            officeList.Add(new Office { name = "Office1", height = Office1.ActualHeight, width = Office1.ActualWidth });
-        
+            
+            List<Data> list = new List<Data>();
+            list.Add(new Data {name = "office1", xx=100, yy=100, area = 10000, tile=10 });
+            list.Add(new Data { name = "office2", xx = 200, yy = 200, area = 40000, tile = 40 });
+            list.Add(new Data { name = "office3", xx = 300, yy = 300, area = 90000, tile = 90 });
+
         }
 
     }
-
-    public class Office
+    public class Data 
     {
         public string name { get; set; }
-        public double height { get; set; }
-        public double width { get; set; }
-        public double size { get; set; }
-        /*
-        public Office(string name, double height, double width)
-        {
-            this.name = name;
-            this.height = height;
-            this.width = width;
-
-            size = height * width;
-        }
-        private string getName() { return name; }
-        private double getHeight() { return height; }
-        private double getWidth() { return width; }
-        private double getSize() { return size; }
-        */
+        public double xx { get; set; }
+        public double yy { get; set; }  
+        public double area { get; set; }    
+        public int tile { get; set; }
     }
 }
