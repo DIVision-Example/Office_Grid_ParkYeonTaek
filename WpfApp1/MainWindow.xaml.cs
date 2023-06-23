@@ -26,9 +26,9 @@ namespace WpfApp1
             InitializeComponent();
             
             List<Office> list = new List<Office>();
-            list.Add(new Office { name = "office1", height=100, width=100, area = 10000, tile=10, myRectange = Office1 });
-            list.Add(new Office { name = "office2", height = 200, width = 200, area = 40000, tile = 40, myRectange = Office2});
-            list.Add(new Office { name = "office3", height = 300, width = 300, area = 90000, tile = 90, myRectange = Office3});
+            list.Add(new Office { name = "office1", width=100, area = 10000, tile=10, myRectange = Office1 });
+            list.Add(new Office { name = "office2", width = 200, area = 40000, tile = 40, myRectange = Office2});
+            list.Add(new Office { name = "office3", width = 300, area = 90000, tile = 90, myRectange = Office3});
 
             OfficeList.ItemsSource = list;
         }
@@ -37,7 +37,14 @@ namespace WpfApp1
     public class Office 
     {
         public string name { get; set; }
-        public double height { get; set; }
+        public double height
+        {
+            get
+            {
+                return myRectange.Height;
+            }
+         
+        }
         public double width { get; set; }  
         public double area { get; set; }    
         public int tile { get; set; }
