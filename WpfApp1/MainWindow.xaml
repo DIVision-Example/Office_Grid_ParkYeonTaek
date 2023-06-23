@@ -30,16 +30,13 @@
         </Grid>
 
         <Grid Grid.Column="1">
-            <DataGrid 
-                ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                ScrollViewer.VerticalScrollBarVisibility="Auto"
-                AutoGenerateColumns="False"
-                CanUserAddRows="False"
-                ItemsSource="{Binding OfficeList}">
+            <DataGrid x:Name="OfficeList">
                 <DataGrid.Columns>
-                    <DataGridCheckBoxColumn Header="Name" Binding="{Binding name}"/>
-                    <DataGridCheckBoxColumn Header="Height" Binding="{Binding height}"/>
-                    <DataGridCheckBoxColumn Header="Width" Binding="{Binding width}"/>
+                    <DataGridTextColumn Header="이름" Binding="{Binding Path=name}" Width="130"/>
+                    <DataGridTextColumn Header="이름" Binding="{Binding Path=xx}" Width="130"/>
+                    <DataGridTextColumn Header="이름" Binding="{Binding Path=yy}" Width="130"/>
+                    <DataGridTextColumn Header="이름" Binding="{Binding Path=area}" Width="130"/>
+                    <DataGridTextColumn Header="이름" Binding="{Binding Path=tile}" Width="130"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
